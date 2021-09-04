@@ -1,6 +1,5 @@
 package tipka.net;
 
-import java.util.Objects;
 import java.util.Random;
 
 public class Cat {
@@ -39,12 +38,7 @@ public class Cat {
         
         int survivingChance = getSurvivingChance(tree);
 
-        Random chance = new Random();
-        if (survivingChance*100 < chance.nextInt(150)) {
-            this.decClimbingSkillLevel();
-        } else {
-            this.incClimbingSkillLevel();
-        }
+        setClimbingSkill(survivingChance);
 
         if (this.catAliveness) {
             System.out.println(this.getCatName() +
@@ -55,6 +49,14 @@ public class Cat {
             System.out.println(this.getCatName() +
                     " climbed " + tree.getTreeName() +
                     ", fell and died... Sad...");
+        }
+    }
+
+    private void setClimbingSkill(int survivingChance) {
+        if (survivingChance *100 < new Random().nextInt(150)) {
+            this.decClimbingSkillLevel();
+        } else {
+            this.incClimbingSkillLevel();
         }
     }
 
