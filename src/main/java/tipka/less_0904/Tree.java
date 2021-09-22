@@ -1,4 +1,4 @@
-package tipka.net;
+package tipka.less_0904;
 
 import java.util.Objects;
 
