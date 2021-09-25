@@ -1,16 +1,33 @@
 plugins {
-    id 'java'
+    id 'java-library'
 }
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
+def selenideVersion = '5.24.3',
+    junitVersion = "5.7.1"
+
 dependencies {
-    testImplementation(
-            "org.junit.jupiter:junit-jupiter:5.7.1")
-    testRuntimeOnly(
-            "org.junit.jupiter:junit-jupiter-engine:5.7.1")
+    implementation 'com.cognitect.aws:workdocs:793.2.629.0'
+    testImplementation (
+            "com.codeborne:selenide:$selenideVersion",
+            "com.codeborne:pdf-test:1.6.1",
+            "com.codeborne:xls-test:1.4.3",
+            "com.opencsv:opencsv:5.3",
+            'org.docx4j:docx4j-JAXB-MOXy:8.3.1',
+            "net.lingala.zip4j:zip4j:2.9.0",
+            "org.assertj:assertj-core:3.19.0",
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "org.junit.jupiter:junit-jupiter-params:$junitVersion")
+    testRuntimeOnly (
+            "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
 
 test {

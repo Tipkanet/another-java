@@ -1,0 +1,3 @@
+Apache POI is a Java library for working with the various file formats based on the Office Open XML standards (OOXML) and Microsoft's OLE 2 Compound Document format (OLE2).
+
+This tutorial focuses on the support of Apache POI for Microsoft Word, the most commonly used Office file format. It walks through steps needed to format and generate an MS Word file and how to parse this file.
