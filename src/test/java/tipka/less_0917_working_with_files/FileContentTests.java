@@ -21,6 +21,8 @@ import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 public class FileContentTests {
     private static final String sourcesFolderPath = "./src/test/resources/";
 
+    //add comment to pass the ninth homework
+
     @Test
     void txtFileTest() throws Exception {
         String  txtFileName = "simple_text.txt",

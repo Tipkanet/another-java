@@ -10,6 +10,7 @@ public class LovelyGarden {
         System.out.println();
         System.out.println(bread.getGardenerName() +
                 " planted the trees: ");
+        // Planting the trees. Output to console info about.
         Tree pie = bread.plantTree("Pie");
         pie.getTreeInfo();
         Tree bagel = bread.plantTree("Bagel");
@@ -18,10 +19,12 @@ public class LovelyGarden {
         cake.getTreeInfo();
         System.out.println();
 
+        // Output to console info about a cat.
         System.out.println(donut.getCatName() +
                 " loves climbing trees!");
         System.out.println();
 
+        // The cat is climbing trees. Output to console info about.
         if (donut.isCatAliveness()) {
             donut.climbTree(pie);
             System.out.println();
