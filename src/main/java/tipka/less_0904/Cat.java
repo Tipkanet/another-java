@@ -23,11 +23,12 @@ public class Cat {
     }
 
     public void climbTree (Tree tree) {
-        
         int survivingChance = getSurvivingChance(tree);
-
         setClimbingSkill(survivingChance);
+        getOutcomeOfClimbing(tree);
+    }
 
+    private void getOutcomeOfClimbing(Tree tree) {
         if (this.catAliveness) {
             System.out.println(this.getCatName() +
                     " climbed " + tree.getTreeName() +
