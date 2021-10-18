@@ -22,24 +22,13 @@ public class Cat {
         return catAliveness;
     }
 
-    public void incClimbingSkillLevel() {
-        this.climbingSkillLevel++;
-    }
-
-    public void decClimbingSkillLevel() {
-        if (this.climbingSkillLevel > 0) {
-            this.climbingSkillLevel--;
-        } else {
-            this.catAliveness = false;
-        }
-    }
-
     public void climbTree (Tree tree) {
-        
         int survivingChance = getSurvivingChance(tree);
-
         setClimbingSkill(survivingChance);
+        getOutcomeOfClimbing(tree);
+    }
 
+    private void getOutcomeOfClimbing(Tree tree) {
         if (this.catAliveness) {
             System.out.println(this.getCatName() +
                     " climbed " + tree.getTreeName() +
@@ -49,6 +38,18 @@ public class Cat {
             System.out.println(this.getCatName() +
                     " climbed " + tree.getTreeName() +
                     ", fell and died... Sad...");
+        }
+    }
+
+    private void incClimbingSkillLevel() {
+        this.climbingSkillLevel++;
+    }
+
+    private void decClimbingSkillLevel() {
+        if (this.climbingSkillLevel > 0) {
+            this.climbingSkillLevel--;
+        } else {
+            this.catAliveness = false;
         }
     }
 
