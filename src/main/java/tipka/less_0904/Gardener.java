@@ -15,6 +15,7 @@ public class Gardener {
         return new Tree(treeName, chance.nextBoolean(), chance.nextBoolean());
     }
 
+    // get gardener's name
     public String getGardenerName() {
         return gardenerName;
     }

@@ -45,6 +45,8 @@ public class Cat {
         this.climbingSkillLevel++;
     }
 
+    // add some comments
+    // ************************************
     private void decClimbingSkillLevel() {
         if (this.climbingSkillLevel > 0) {
             this.climbingSkillLevel--;
@@ -54,7 +56,7 @@ public class Cat {
     }
 
     private void setClimbingSkill(int survivingChance) {
-        if (survivingChance *100 < new Random().nextInt(150)) {
+        if (survivingChance *100 < new Random().nextInt(200)) {
             this.decClimbingSkillLevel();
         } else {
             this.incClimbingSkillLevel();
